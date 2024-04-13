@@ -137,12 +137,12 @@ import Keycloak from 'keycloak-js';
   Init Options
 */
 let initOptions = {
-  url: 'https://kc2.ehrn.ehr.network/', // Using relative path for the proxy
-  realm: 'ehrn-v2-sbx-ayushehr',
-  clientId: 'Ayushehr',
-  // url: 'http://localhost:8080/',
-  // realm: 'myRealm',
-  // clientId: 'react',
+  // url: 'https://kc2.ehrn.ehr.network/', // Using relative path for the proxy
+  // realm: 'ehrn-v2-sbx-ayushehr',
+  // clientId: 'Ayushehr',
+  url: 'http://localhost:8080/',
+  realm: 'myRealm',
+  clientId: 'react',
 }
 
 let kc = new Keycloak(initOptions);
