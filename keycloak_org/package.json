@@ -2,6 +2,7 @@
   "name": "keycloak_org",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ranbhad.github.io/keycloak_example/",
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
@@ -21,9 +22,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && cp build/index.html build/404.html",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build",
+    "postdeploy": "echo 'Deployed to GitHub Pages!'"
   },
   "eslintConfig": {
     "extends": [
@@ -44,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^3.2.3",
     "http-proxy-middleware": "^3.0.0"
   }
 }
